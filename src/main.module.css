@@ -5,38 +5,38 @@
 html,
 body,
 .app {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .app {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-    position: absolute;
-    top: 85px;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: mainCream;
-    margin: 0;
-    font-size: 18px;
+  background-color: mainCream;
+  margin: 0;
+  font-size: 18px;
 }
 
 html * {
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: 18px;
-    color: black;
+  font-family: 'Karla';
+  font-weight: 400;
+  font-size: 18px;
+  color: black;
 }
 
 .helpButton {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    z-index: 3;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 3;
 }

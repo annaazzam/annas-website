@@ -1,123 +1,123 @@
 .container {
-    margin: 0 20%;
+  margin: 0 20%;
 }
 
 .videoContainer {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
 }
 
 .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .textDescription {
-    text-align: center;
-    margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .playlistItem {
-    box-sizing: border-box;
-    padding: 12px;
-    display: flex;
-    width: 100%;
-    cursor: pointer;
-    border-bottom: 1px solid lightgrey;
-    transition: background-color 0.1s ease;
+  box-sizing: border-box;
+  padding: 12px;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 1px solid lightgrey;
+  transition: background-color 0.1s ease;
 }
 
 .playlistItemTitle {
-    margin-left: 15px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  margin-left: 15px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .durationPill {
-    font-size: 13px;
-    background-color: #444;
-    padding: 0px 4px;
-    color: white;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 37px;
+  font-size: 13px;
+  background-color: #444;
+  padding: 0px 4px;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
 }
 
 .playlistItem:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .playlistItem:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 .playlistItem.current {
-    background-color: #eee;
-    text-decoration: underline;
+  background-color: #eee;
+  text-decoration: underline;
 }
 
 .playlistHeader {
-    padding: 12px;
-    border-bottom: 1px solid grey;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 21px;
+  padding: 12px;
+  border-bottom: 1px solid grey;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 21px;
 }
 
 .playlistContainer {
-    border: 1px solid grey;
-    margin-top: 25px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
-    background-color: white;
+  border: 1px solid grey;
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
 .buttons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button {
-    text-align: center;
-    padding: 4px 8px;
-    margin: 4px;
-    text-decoration: underline;
-    cursor: pointer;
+  text-align: center;
+  padding: 4px 8px;
+  margin: 4px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .button.disabled {
-    color: grey;
-    cursor: not-allowed;
+  color: grey;
+  cursor: not-allowed;
 }
 
 .itemNumber {
-    width: 20px;
-    color: grey;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
+  width: 20px;
+  color: grey;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .play {
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 10px solid grey;
-    height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid grey;
+  height: 0;
 }

@@ -1,26 +1,26 @@
 @value mobileBreakpoint from '../main.module.css';
 
 .button {
-    padding: 20px;
-    border: 1px solid black;
+  padding: 20px;
+  border: 1px solid black;
 }
 
 .button:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .container {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media (max-width: mobileBreakpoint) {
   .button {
-      padding: 10px;
-      border: 1px solid black;
-      font-size: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 15px;
   }
 }

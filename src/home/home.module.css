@@ -1,100 +1,100 @@
 @value mobileBreakpoint from '../main.module.css';
 
 .home {
-    height: 70%;
+  height: 70%;
 }
 
 .homeContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .backgroundHeaderPhoto {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .fancyText {
-    font-weight: 700;
-    font-style: oblique;
+  font-weight: 700;
+  font-style: oblique;
 }
 
 .intro,
 .intro * {
-    font-size: 25px;
-    color: white;
+  font-size: 25px;
+  color: white;
 }
 
 .intro {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: flex-end;
-    padding: 0 10%;
-    box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0 10%;
+  box-sizing: border-box;
 }
 
 .introText {
-    text-align: center;
+  text-align: center;
 }
 
 .annaAzzam {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-family: 'Lato', sans-serif;
-    font-size: 11vw;
-    letter-spacing: 6px;
-    text-align: center;
-    opacity: 0;
-    animation: floatIn 0.7s 0.5s ease-in forwards;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  font-size: 11vw;
+  letter-spacing: 6px;
+  text-align: center;
+  opacity: 0;
+  animation: floatIn 0.7s 0.5s ease-in forwards;
 }
 
 @keyframes floatIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .canvaLink {
-    display: inline-block;
-    transition: transform 0.2s ease;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .canvaLink:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .photogIntro,
 .projectsIntro {
-    height: 500px;
-    width: 100%;
+  height: 500px;
+  width: 100%;
 }
 
 .seeMoreContainer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 20px;
-    box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 @media (max-width: mobileBreakpoint) {
-    .seeMoreContainer {
-        justify-content: center;
-    }
+  .seeMoreContainer {
+    justify-content: center;
+  }
 }

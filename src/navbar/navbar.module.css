@@ -1,115 +1,115 @@
 @value mainCream from '../main.module.css';
 
 .navbarItem {
-    margin: 0 16px;
-    transition: transform 0.2s ease;
+  margin: 0 16px;
+  transition: transform 0.2s ease;
 }
 
 .navbarItem a {
-    text-decoration: none;
-    color: #666;
+  text-decoration: none;
+  color: #666;
 }
 
 .navbarItem:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .navbarItem:hover a {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .navbarItem.currentNavbarItem a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
 .navbarContainer {
-    padding: 30px 50px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: mainCream;
-    height: 90px;
-    letter-spacing: 2px;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: mainCream;
+  height: 90px;
+  letter-spacing: 2px;
 }
 
 .navItems {
-    display: flex;
+  display: flex;
 }
 
 @value menuWidth: 300px;
 
 .menu {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    padding-top: 10px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    width: menuWidth;
-    transform: translate(menuWidth);
-    pointer-events: none;
-    transition: transform 0.2s ease;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding-top: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: menuWidth;
+  transform: translate(menuWidth);
+  pointer-events: none;
+  transition: transform 0.2s ease;
 }
 
 .menu.visible {
-    transform: translate(0);
-    pointer-events: all;
+  transform: translate(0);
+  pointer-events: all;
 }
 
 .menu .navbarItem {
-    padding: 15px 10px;
-    transform-origin: left;
+  padding: 15px 10px;
+  transform-origin: left;
 }
 
 .backgroundOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    background-color: black;
-    opacity: 0;
-    backdrop-filter: blur(0);
-    transition: backdrop-filter 0.2s ease, opacity 0.2s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-color: black;
+  opacity: 0;
+  backdrop-filter: blur(0);
+  transition: backdrop-filter 0.2s ease, opacity 0.2s ease;
 }
 
 .backgroundOverlay.visible {
-    backdrop-filter: blur(1px);
-    opacity: 0.5;
-    pointer-events: all;
+  backdrop-filter: blur(1px);
+  opacity: 0.5;
+  pointer-events: all;
 }
 
 .socialIcons {
-    display: flex;
+  display: flex;
 }
 
 .socialIconsWrapper {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .socialIcon,
 .menuIcon {
-    width: 25px;
-    transition: transform 0.2s ease;
+  width: 25px;
+  transition: transform 0.2s ease;
 }
 
 .socialIcon:hover,
 .menuIcon:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .socialIcon {
-    padding-right: 12px;
+  padding-right: 12px;
 }
 
 .menuIcon {
-    cursor: pointer;
+  cursor: pointer;
 }

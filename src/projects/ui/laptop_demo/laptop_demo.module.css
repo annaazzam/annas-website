@@ -1,95 +1,93 @@
-
 .image {
-    width: 943px;
-    margin: auto;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  width: 943px;
+  margin: auto;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .laptopContents {
-    position: absolute;
-    width: 500px;
-    top: 86px;
-    left: 259px;
+  position: absolute;
+  width: 500px;
+  top: 86px;
+  left: 259px;
 }
 
 .laptop {
-    position: absolute;
-    width: 890px;
-    left: 53px;
+  position: absolute;
+  width: 890px;
+  left: 53px;
 }
-
 
 @media (max-width: 943px) {
   .image {
-      width: 622px;
-      margin: auto;
-      height: 330px;
-      display: flex;
-      justify-content: center;
-      position: relative;
+    width: 622px;
+    margin: auto;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    position: relative;
   }
 
   .laptopContents {
-      position: absolute;
-      width: 330px;
-      top: 57px;
-      left: 171px;
+    position: absolute;
+    width: 330px;
+    top: 57px;
+    left: 171px;
   }
 
   .laptop {
-      position: absolute;
-      width: 587px;
-      left: 35px;
+    position: absolute;
+    width: 587px;
+    left: 35px;
   }
 }
 
 @media (max-width: 622px) {
   .image {
-      width: 472px;
-      margin: auto;
-      height: 250px;
-      display: flex;
-      justify-content: center;
-      position: relative;
+    width: 472px;
+    margin: auto;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    position: relative;
   }
 
   .laptopContents {
-      position: absolute;
-      width: 250px;
-      top: 43px;
-      left: 130px;
+    position: absolute;
+    width: 250px;
+    top: 43px;
+    left: 130px;
   }
 
   .laptop {
-      position: absolute;
-      width: 445px;
-      left: 27px;
+    position: absolute;
+    width: 445px;
+    left: 27px;
   }
 }
 
 @media (max-width: 472px) {
   .image {
-      width: 282px;
-      margin: auto;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      position: relative;
+    width: 282px;
+    margin: auto;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    position: relative;
   }
-  
+
   .laptopContents {
-      position: absolute;
-      width: 150px;
-      top: 26px;
-      left: 78px;
+    position: absolute;
+    width: 150px;
+    top: 26px;
+    left: 78px;
   }
-  
+
   .laptop {
-      position: absolute;
-      width: 267px;
-      left: 16px;
+    position: absolute;
+    width: 267px;
+    left: 16px;
   }
 }

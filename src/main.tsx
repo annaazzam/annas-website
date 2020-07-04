@@ -26,34 +26,34 @@ function ScrollToTop() {
 export class Main extends React.Component {
   render() {
     return (
-        <Router>
-          <div className={styles.app}>
-            <Navbar/>
-            <div className={styles.content}>
-              <Switch>
-                <Route exact path="/">
-                  <ScrollToTop/>
-                  <Home/>
-                </Route>
-                <Route path="/photojournals">
-                  <ScrollToTop/>
-                  <PhotoJournals/>
-                </Route>
-                <Route path="/blog">
-                  <ScrollToTop/>
-                  <Blog/>
-                </Route>
-                <Route path="/projects">
-                  <ScrollToTop/>
-                  <Projects/>
-                </Route>
-              </Switch>
-            </div>
-            <div className={styles.helpButton}>
-              <HelpButton/>
-            </div>
+      <Router>
+        <div className={styles.app}>
+          <Navbar />
+          <div className={styles.content}>
+            <Switch>
+              <Route exact path="/">
+                <ScrollToTop />
+                <Home />
+              </Route>
+              <Route path="/photojournals">
+                <ScrollToTop />
+                <PhotoJournals />
+              </Route>
+              <Route path="/blog">
+                <ScrollToTop />
+                <Blog />
+              </Route>
+              <Route path="/projects">
+                <ScrollToTop />
+                <Projects />
+              </Route>
+            </Switch>
           </div>
-        </Router>
+          <div className={styles.helpButton}>
+            <HelpButton />
+          </div>
+        </div>
+      </Router>
     );
   }
 }

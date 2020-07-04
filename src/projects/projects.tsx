@@ -14,16 +14,32 @@ import pythonTutorialsThumbnail from './python_tutorials_thumbnail.jpg';
 import personalWebsiteThumbnail from './personal_website_thumbnail.jpg';
 
 type Project = {
-  name: string,
-  displayName: string,
-  image: string, 
+  name: string;
+  displayName: string;
+  image: string;
 };
 
 const projects: Project[] = [
-  { name: 'youtube-focus-mode', displayName: 'YouTube Focus Mode Chrome Extension', image: youtubeExtensionThumbnail },
-  { name: 'simple-newtab', displayName: 'Simple Newtab Chrome Extension', image: newtabExtensionThumbnail },
-  { name: 'python-tutorials', displayName: 'Python Tutorial Videos', image: pythonTutorialsThumbnail },
-  { name: 'personal-website', displayName: 'Personal Website', image: personalWebsiteThumbnail },
+  {
+    name: 'youtube-focus-mode',
+    displayName: 'YouTube Focus Mode Chrome Extension',
+    image: youtubeExtensionThumbnail,
+  },
+  {
+    name: 'simple-newtab',
+    displayName: 'Simple Newtab Chrome Extension',
+    image: newtabExtensionThumbnail,
+  },
+  {
+    name: 'python-tutorials',
+    displayName: 'Python Tutorial Videos',
+    image: pythonTutorialsThumbnail,
+  },
+  {
+    name: 'personal-website',
+    displayName: 'Personal Website',
+    image: personalWebsiteThumbnail,
+  },
 ];
 
 @mobxReact.observer
@@ -53,34 +69,35 @@ export class Projects extends React.Component {
   };
 
   private getDisplayName = (projectName: string) => {
-    return projects.find(p => p.name === projectName)?.displayName!;
+    return projects.find((p) => p.name === projectName)?.displayName!;
   };
 
   private readonly renderCurrentProject = () => {
     switch (this.currentProject) {
       case 'simple-newtab':
-        return <NewtabProject/>;
+        return <NewtabProject />;
       case 'youtube-focus-mode':
-        return <YoutubeFocusModeProject/>;
+        return <YoutubeFocusModeProject />;
       case 'personal-website':
-        return <PersonalWebsite/>;
+        return <PersonalWebsite />;
       case 'python-tutorials':
-        return <PythonTutorials/>;
+        return <PythonTutorials />;
       default:
-        return <div>Not found</div>
+        return <div>Not found</div>;
     }
   };
 
   render() {
-    return this.currentProject
-        ? (
-            <div className={styles.projectPage}>
-              <div className={styles.projectTitle}>
-                {this.getDisplayName(this.currentProject).toUpperCase()}
-              </div>
-              {this.renderCurrentProject()}
-            </div>
-        ) : <ProjectsGrid onCardClick={this.onCardClick} wrap={true}/>;
+    return this.currentProject ? (
+      <div className={styles.projectPage}>
+        <div className={styles.projectTitle}>
+          {this.getDisplayName(this.currentProject).toUpperCase()}
+        </div>
+        {this.renderCurrentProject()}
+      </div>
+    ) : (
+      <ProjectsGrid onCardClick={this.onCardClick} wrap={true} />
+    );
   }
 }
 
@@ -89,19 +106,24 @@ export const ProjectsGrid = ({
   wrap,
   numProjects,
 }: {
-  onCardClick(name: string): void,
-  wrap?: boolean,
-  numProjects?: number,
+  onCardClick(name: string): void;
+  wrap?: boolean;
+  numProjects?: number;
 }) => (
-    <div className={styles.projectCards} style={{ flexWrap: wrap ? 'wrap' : 'nowrap' }}>
-      {projects.slice(0, numProjects).map(({ displayName, image, name }: Project, i: number) => (
-          <Card
-              text={displayName}
-              image={image}
-              onClick={() => onCardClick(name)}
-              key={i}
-              largeImage={true}
-          />
+  <div
+    className={styles.projectCards}
+    style={{ flexWrap: wrap ? 'wrap' : 'nowrap' }}
+  >
+    {projects
+      .slice(0, numProjects)
+      .map(({ displayName, image, name }: Project, i: number) => (
+        <Card
+          text={displayName}
+          image={image}
+          onClick={() => onCardClick(name)}
+          key={i}
+          largeImage={true}
+        />
       ))}
-    </div>
+  </div>
 );

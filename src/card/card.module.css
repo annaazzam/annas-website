@@ -1,96 +1,96 @@
 .card,
 .placeholder {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 25px;
-    box-sizing: border-box;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 30%;
-    max-width: 50%;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    background-color: white;
-    /* Because of tabIndex={-1} */
-    outline: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 30%;
+  max-width: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  background-color: white;
+  /* Because of tabIndex={-1} */
+  outline: none;
 }
 
 @media (max-width: 500px) {
-    .card {
-        max-width: 100%;
-    }
+  .card {
+    max-width: 100%;
+  }
 }
 
 .card:hover .darkOverlay,
 .darkOverlay.show {
-    opacity: 0.7;
-    backdrop-filter: blur(1px);
+  opacity: 0.7;
+  backdrop-filter: blur(1px);
 }
 
 .card.show .cardOverlayText,
 .card:hover .cardOverlayText {
-    opacity: 1;
+  opacity: 1;
 }
 
 .card:hover,
 .placeholder:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .placeholder {
-    height: 360px;
+  height: 360px;
 }
 
 .cardImg {
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
 }
 
 .cardText * {
-    color: black;
+  color: black;
 }
 
 .cardText {
-    height: 100px;
+  height: 100px;
 }
 
 .cardText.small {
-    height: 50px;
+  height: 50px;
 }
 
 .cardTitle {
-    /* Font size is calculated dynamically in JS */
-    font-weight: 700;
-    margin-bottom: 8px;
+  /* Font size is calculated dynamically in JS */
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .cardOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    overflow: hidden;
-    background-color: black;
-    backdrop-filter: blur(0px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.2s ease, backdrop-filter 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: black;
+  backdrop-filter: blur(0px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease, backdrop-filter 0.2s ease;
 }
 
 .cardOverlayText {
-    color: white;
-    opacity: 0;
-    width: 75%;
-    font-style: italic;
-    text-align: center;
+  color: white;
+  opacity: 0;
+  width: 75%;
+  font-style: italic;
+  text-align: center;
 }

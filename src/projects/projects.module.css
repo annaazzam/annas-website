@@ -1,0 +1,42 @@
+.projectCards {
+    height: 400px;
+    width: 100%;
+    display: flex;
+}
+
+.projectPage {
+    width: 100%;
+    height: 100%;
+}
+
+.projectTitle {
+    padding: 20px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descriptionText {
+    margin: 50px;
+    font-size: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.actionButton {
+    margin-bottom: 10px;
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.languagesSection {
+    margin-bottom: 40px;
+}

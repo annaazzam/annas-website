@@ -1,0 +1,29 @@
+.button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.tootip {
+    pointer-events: auto !important;
+}
+
+.tooltip a,
+.tooltip div {
+    font-size: 13px;
+    color: white;
+    margin-left: 2px;
+}

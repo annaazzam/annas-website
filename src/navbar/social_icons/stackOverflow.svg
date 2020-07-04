@@ -1,0 +1,18 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle r="256" id="ellipse" fill="#000000" cy="256" cx="256"/>
+  <rect id="svg_1" y="207.4" x="198.7" width="126" transform="matrix(-0.8613,-0.508,0.508,-0.8613,374.8696,544.0087) " height="26.9" fill="#FFFFFF"/>
+  <rect id="svg_2" y="255" x="179.9" width="126" transform="matrix(-0.9657,-0.2596,0.2596,-0.9657,407.7935,590.7263) " height="26.9" fill="#FFFFFF"/>
+  <rect id="svg_3" y="301.2" x="172.9" width="126" transform="matrix(-0.9958,-0.09179588,0.09179588,-0.9958,441.9307,649.6382) " height="26.9" fill="#FFFFFF"/>
+  <rect id="svg_4" y="341.4" x="170.2" width="126" height="26.9" fill="#FFFFFF"/>
+  <path id="svg_5" fill="#FFFFFF" d="m339.1,404.6c0,0 0,6.3 -0.2,6.3l0,0.1l-201.6,0c0,0 -6.3,0 -6.3,-0.1l-0.2,0l0,-131.1l21.5,0l0,110l165.3,0l0,-110l21.5,0l0,124.8z"/>
+  <rect id="svg_6" y="163.4" x="240.1" width="126" transform="matrix(0.5634,0.8262,-0.8262,0.5634,278.4269,-173.2552) " height="26.9" fill="#FFFFFF"/>
+  <rect id="svg_7" y="141.9" x="294.2" width="126" transform="matrix(0.171,0.9853,-0.9853,0.171,449.1696,-223.1233) " height="26.9" fill="#FFFFFF"/>
+ </g>
+</svg>

@@ -1,0 +1,27 @@
+.photographyCards {
+    height: 400px;
+    width: 100%;
+    display: flex;
+}
+
+.collectionTitle {
+    padding: 20px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.photosMasonry {
+    width: 100%;
+    display: flex;
+}
+
+.photoElement {
+    height: 200px;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.photoElement:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}

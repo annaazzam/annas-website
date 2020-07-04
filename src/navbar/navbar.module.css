@@ -77,12 +77,10 @@
   pointer-events: none;
   background-color: black;
   opacity: 0;
-  backdrop-filter: blur(0);
-  transition: backdrop-filter 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .backgroundOverlay.visible {
-  backdrop-filter: blur(1px);
   opacity: 0.5;
   pointer-events: all;
 }

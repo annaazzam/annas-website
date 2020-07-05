@@ -80,8 +80,8 @@
 }
 
 .ribbonTopLeft {
-  top: -46px;
-  left: -46px;
+  top: -45px;
+  left: -45px;
 }
 .ribbonTopLeft::before,
 .ribbonTopLeft::after {

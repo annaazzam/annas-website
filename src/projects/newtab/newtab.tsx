@@ -4,6 +4,7 @@ import newtabGif from './newtab_gif.gif';
 import { LaptopDemo } from '../ui/laptop_demo/laptop_demo';
 import { Button } from '../../ui/button';
 import { Languages } from '../ui/languages/languages';
+import classNames from 'classnames';
 
 export class NewtabProject extends React.Component {
   render() {
@@ -19,8 +20,10 @@ export class NewtabProject extends React.Component {
           <div className={styles.languagesSection}>
             <Languages languages={['JavaScript', 'HTML', 'CSS', 'JSON']} />
           </div>
-          {/* TODO: Still not published */}
-          <div className={styles.actionButton}>
+          <div className={classNames(styles.actionButton, styles.disabled)}>
+            <div className={classNames(styles.ribbon, styles.ribbonTopLeft)}>
+              <span>Coming soon</span>
+            </div>
             <Button label="View on Chrome Store >" />
           </div>
           <div className={styles.actionButton}>

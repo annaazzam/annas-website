@@ -32,6 +32,10 @@
   transition: background-color 0.1s ease;
 }
 
+.playlistItem.current .playlistItemTitle {
+  text-decoration: underline;
+}
+
 .playlistItemTitle {
   margin-left: 15px;
   display: inline-block;
@@ -50,6 +54,7 @@
   justify-content: center;
   align-items: center;
   width: 37px;
+  flex-shrink: 0;
 }
 
 .playlistItem:last-child {
@@ -62,7 +67,6 @@
 
 .playlistItem.current {
   background-color: #eee;
-  text-decoration: underline;
 }
 
 .playlistHeader {
@@ -113,6 +117,7 @@
   font-size: 15px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .play {
@@ -120,4 +125,22 @@
   border-bottom: 5px solid transparent;
   border-left: 10px solid grey;
   height: 0;
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 0 10%;
+  }
+
+  .playlistHeader {
+    font-size: 17px;
+  }
+
+  .buttons * {
+    font-size: 15px;
+  }
+
+  .playlistItemTitle * {
+    font-size: 16px;
+  }
 }

@@ -10,6 +10,11 @@ const images = new Map<string, ImageCollection>();
 // Images in the folder should be named 1.jpg, 2.jpg ... etc.
 // Run this script to get set up: `ls -v | cat -n | while read n f; do mv -n "$f" "$n.jpg"; done`
 const collections = [
+  {
+    folderName: 'malabar',
+    displayName: 'Malabar Headland National Park',
+    numImages: 17,
+  },
   { folderName: 'graduation', displayName: 'My Graduation', numImages: 15 },
   { folderName: 'europe', displayName: 'Paris & Venice', numImages: 36 },
   { folderName: 'seattle', displayName: 'Seattle', numImages: 46 },

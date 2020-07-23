@@ -62,7 +62,7 @@ export class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.blogIntro}>
           <BlogGrid
             blogPosts={this.allBlogs.slice(0, this.numColumns)}
             numPlaceholders={this.numColumns}
@@ -77,6 +77,7 @@ export class Home extends React.Component {
             onCardClick={(folder) =>
               (window.location.href = `/photojournals#${folder}`)
             }
+            largeImage={false}
           />
           <div className={styles.seeMoreContainer}>
             <Button
@@ -89,6 +90,7 @@ export class Home extends React.Component {
           <ProjectsGrid
             numProjects={this.numColumns}
             onCardClick={(name) => (window.location.href = `/projects#${name}`)}
+            largeImage={false}
           />
           <div className={styles.seeMoreContainer}>
             <Button link="/projects" label="See more projects >" />

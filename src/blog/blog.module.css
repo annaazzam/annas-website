@@ -3,3 +3,8 @@
   width: 100%;
   display: flex;
 }
+
+.blogCard {
+  flex: 1 1 300px;
+  margin: 25px;
+}

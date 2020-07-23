@@ -58,7 +58,7 @@ export class PhotoJournals extends React.Component {
         />
       </>
     ) : (
-      <CollectionGrid onCardClick={this.onCardClick} wrap={true} />
+      <CollectionGrid onCardClick={this.onCardClick} wrap={true} largeImage={true} />
     );
   }
 }
@@ -67,6 +67,7 @@ export class CollectionGrid extends React.Component<{
   wrap?: boolean;
   numCollections?: number;
   onCardClick(collectionFolderName: string): void;
+  largeImage: boolean;
 }> {
   private readonly getCollections = () => {
     const { numCollections } = this.props;
@@ -76,20 +77,22 @@ export class CollectionGrid extends React.Component<{
   };
 
   render() {
-    const { wrap = false, onCardClick } = this.props;
+    const { wrap = false, onCardClick, largeImage } = this.props;
     return (
       <div
         className={styles.photographyCards}
         style={{ flexWrap: wrap ? 'wrap' : 'nowrap' }}
       >
         {this.getCollections().map(({ displayName, photos, folderName }, i) => (
-          <Card
-            text={displayName}
-            image={photos[0]}
-            key={i}
-            onClick={() => onCardClick(folderName)}
-            largeImage={true}
-          />
+          <div className={styles.photographyCard}>
+            <Card
+              text={displayName}
+              image={photos[0]}
+              key={i}
+              onClick={() => onCardClick(folderName)}
+              largeImage={largeImage}
+            />
+          </div>
         ))}
       </div>
     );

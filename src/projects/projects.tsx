@@ -96,7 +96,7 @@ export class Projects extends React.Component {
         {this.renderCurrentProject()}
       </div>
     ) : (
-      <ProjectsGrid onCardClick={this.onCardClick} wrap={true} />
+      <ProjectsGrid onCardClick={this.onCardClick} wrap={true} largeImage={true} />
     );
   }
 }
@@ -105,10 +105,12 @@ export const ProjectsGrid = ({
   onCardClick,
   wrap,
   numProjects,
+  largeImage,
 }: {
   onCardClick(name: string): void;
   wrap?: boolean;
   numProjects?: number;
+  largeImage: boolean;
 }) => (
   <div
     className={styles.projectCards}
@@ -117,13 +119,15 @@ export const ProjectsGrid = ({
     {projects
       .slice(0, numProjects)
       .map(({ displayName, image, name }: Project, i: number) => (
-        <Card
-          text={displayName}
-          image={image}
-          onClick={() => onCardClick(name)}
-          key={i}
-          largeImage={true}
-        />
+        <div className={styles.projectCard}>
+          <Card
+            text={displayName}
+            image={image}
+            onClick={() => onCardClick(name)}
+            key={i}
+            largeImage={largeImage}
+          />
+        </div>
       ))}
   </div>
 );

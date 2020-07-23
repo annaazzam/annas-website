@@ -82,18 +82,22 @@ export const BlogGrid = ({
         {Array(numPlaceholders)
           .fill(0)
           .map((_, key) => (
-            <div className={cardStyles.placeholder} key={key} />
+            <div className={styles.blogCard} key={key} >
+              <div className={cardStyles.placeholder} />
+            </div>
           ))}
       </>
     )}
     {blogPosts.map(({ title, image, link }: BlogPost, i: number) => (
-      <Card
-        text={title}
-        image={image}
-        link={link}
-        overlayText="Read on medium"
-        key={i}
-      />
+      <div className={styles.blogCard}>
+        <Card
+          text={title}
+          image={image}
+          link={link}
+          overlayText="Read on medium"
+          key={i}
+        />
+      </div>
     ))}
   </div>
 );

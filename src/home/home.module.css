@@ -80,8 +80,9 @@
 }
 
 .photogIntro,
-.projectsIntro {
-  height: 500px;
+.projectsIntro,
+.blogIntro {
+  margin-bottom: 20px;
   width: 100%;
 }
 

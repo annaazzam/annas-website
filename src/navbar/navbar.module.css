@@ -93,6 +93,10 @@
   flex-shrink: 0;
 }
 
+.socialIconContainer {
+  padding-right: 12px;
+}
+
 .socialIcon,
 .menuIcon {
   width: 25px;
@@ -102,10 +106,6 @@
 .socialIcon:hover,
 .menuIcon:hover {
   transform: scale(1.1);
-}
-
-.socialIcon {
-  padding-right: 12px;
 }
 
 .menuIcon {

@@ -194,7 +194,7 @@ class SocialIcons extends React.Component {
     return (
       <div className={styles.socialIcons}>
         {this.socials.map(({ icon, link, name }, i: number) => (
-          <div key={i}>
+          <div key={i} className={styles.socialIconContainer}>
             <ReactTooltip id={name} place="bottom">
               {name}
             </ReactTooltip>

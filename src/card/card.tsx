@@ -71,7 +71,7 @@ export class Card extends React.Component<{
   render() {
     const { text, image, overlayText, largeImage = false } = this.props;
     return (
-      <div className={styles.card} onBlur={this.onBlur} tabIndex={-1}>
+      <div className={styles.card} onBlur={this.onBlur} role="button">
         <div
           className={classNames(styles.cardText, largeImage && styles.small)}
           // Style is inlined here so that it can be used for font-size calculation in
@@ -87,7 +87,7 @@ export class Card extends React.Component<{
           style={{ backgroundImage: `url(${image})` }}
           className={styles.cardImg}
         />
-        <div
+        <button
           className={classNames(
             styles.cardOverlay,
             overlayText && styles.darkOverlay,
@@ -100,7 +100,7 @@ export class Card extends React.Component<{
               {overlayText} {'>'}
             </div>
           )}
-        </div>
+        </button>
       </div>
     );
   }

@@ -42,6 +42,9 @@ export function getBlogs(): Promise<BlogPost[]> {
           link: item.link,
         };
       });
+      // Medium considers comments the same as blog posts. Until I find a better way to filter them
+      // out, putting this hack here:
+      blogPosts = blogPosts.filter(({ title }) => !title?.includes('Thanks Sean'));
       resolve(blogPosts);
     });
   });

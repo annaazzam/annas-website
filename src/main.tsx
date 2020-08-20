@@ -28,8 +28,10 @@ export class Main extends React.Component {
     return (
       <Router>
         <div className={styles.app}>
-          <Navbar />
-          <div className={styles.content}>
+          <div role="navigation">
+            <Navbar />
+          </div>
+          <div className={styles.content} role="main">
             <Switch>
               <Route exact path="/">
                 <ScrollToTop />
@@ -49,7 +51,7 @@ export class Main extends React.Component {
               </Route>
             </Switch>
           </div>
-          <div className={styles.helpButton}>
+          <div className={styles.helpButton} role="complementary">
             <HelpButton />
           </div>
         </div>

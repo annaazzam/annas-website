@@ -20,7 +20,7 @@
   }
 }
 
-.darkOverlay {
+.cardOverlay.darkOverlay {
   background-color: black;
   backdrop-filter: blur(0px);
   opacity: 0;

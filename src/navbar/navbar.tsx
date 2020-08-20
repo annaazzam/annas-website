@@ -178,11 +178,11 @@ class SocialIcons extends React.Component {
       icon: linkedinIcon,
       link: 'https://www.linkedin.com/in/annaazzam/',
     },
-    {
-      name: 'Instagram',
-      icon: instagramIcon,
-      link: 'https://www.instagram.com/annaazzam/',
-    },
+    // {
+    //   name: 'Instagram',
+    //   icon: instagramIcon,
+    //   link: 'https://www.instagram.com/annaazzam/',
+    // },
     {
       name: 'Stack Overflow',
       icon: stackOverflowIcon,

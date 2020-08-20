@@ -15,6 +15,7 @@ export class Card extends React.Component<{
   onClick?(): void;
   // When true, the image is larger and the title is smaller
   largeImage?: boolean;
+  ariaLabel: string;
 }> {
   @mobx.observable.ref
   private showOverlay: boolean = false;
@@ -69,7 +70,7 @@ export class Card extends React.Component<{
   };
 
   render() {
-    const { text, image, overlayText, largeImage = false } = this.props;
+    const { text, image, overlayText, largeImage = false, ariaLabel } = this.props;
     return (
       <div className={styles.card} onBlur={this.onBlur} role="button">
         <div
@@ -94,6 +95,7 @@ export class Card extends React.Component<{
             overlayText && this.showOverlay && styles.show,
           )}
           onClick={this.onClick}
+          aria-label={ariaLabel}
         >
           {overlayText && (
             <div className={styles.cardOverlayText}>

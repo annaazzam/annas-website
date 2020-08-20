@@ -84,13 +84,14 @@ export class CollectionGrid extends React.Component<{
         style={{ flexWrap: wrap ? 'wrap' : 'nowrap' }}
       >
         {this.getCollections().map(({ displayName, photos, folderName }, i) => (
-          <div className={styles.photographyCard}>
+          <div className={styles.photographyCard} key={i}>
             <Card
               text={displayName}
               image={photos[0]}
               key={i}
               onClick={() => onCardClick(folderName)}
               largeImage={largeImage}
+              ariaLabel={`Open photo collection: ${displayName}`}
             />
           </div>
         ))}

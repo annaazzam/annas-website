@@ -92,13 +92,13 @@ export const BlogGrid = ({
       </>
     )}
     {blogPosts.map(({ title, image, link }: BlogPost, i: number) => (
-      <div className={styles.blogCard}>
+      <div className={styles.blogCard} key={i}>
         <Card
           text={title}
           image={image}
           link={link}
           overlayText="Read on medium"
-          key={i}
+          ariaLabel={`Open blog post on Medium: ${title}`}
         />
       </div>
     ))}

@@ -119,13 +119,13 @@ export const ProjectsGrid = ({
     {projects
       .slice(0, numProjects)
       .map(({ displayName, image, name }: Project, i: number) => (
-        <div className={styles.projectCard}>
+        <div className={styles.projectCard} key={i}>
           <Card
             text={displayName}
             image={image}
             onClick={() => onCardClick(name)}
-            key={i}
             largeImage={largeImage}
+            ariaLabel={`Open project details: ${displayName}`}
           />
         </div>
       ))}

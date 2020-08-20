@@ -49,7 +49,7 @@ export class Home extends React.Component {
             style={{ backgroundImage: `url(${background})` }}
           />
           <div className={styles.intro}>
-            <div className={styles.annaAzzam}>ANNA AZZAM</div>
+            <h1 className={styles.annaAzzam}>ANNA AZZAM</h1>
             <br />
             <div className={styles.introText}>
               Software Developer @{' '}

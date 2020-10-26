@@ -12,7 +12,7 @@ export class DigitalPetGame extends React.Component {
         <LaptopDemo demoImg={digitalPetGameGif} />
         <div className={styles.content}>
           <div className={styles.descriptionText}>
-            A Game
+          This digital pet game which allows you to raise a pet and take care of it! This game is in Beta, and some features are not yet finished. Stay tuned for more soon!
           </div>
           <div className={styles.languagesSection}>
             <Languages languages={['React', 'HTML', 'CSS', 'MobX']} />

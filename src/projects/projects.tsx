@@ -3,6 +3,7 @@ import * as mobxReact from 'mobx-react';
 import * as React from 'react';
 import styles from './projects.module.css';
 import { Card } from '../card/card';
+import { DigitalPetGame } from './digital_pet_game/digital_pet_game';
 import { NewtabProject } from './newtab/newtab';
 import { YoutubeFocusModeProject } from './youtube_extension/youtube_extension';
 import { PersonalWebsite } from './personal_website/personal_website';
@@ -12,6 +13,7 @@ import newtabExtensionThumbnail from './newtab_extension_thumbnail.jpg';
 import youtubeExtensionThumbnail from './youtube_extension_thumbnail.jpg';
 import pythonTutorialsThumbnail from './python_tutorials_thumbnail.jpg';
 import personalWebsiteThumbnail from './personal_website_thumbnail.jpg';
+import digitalPetGameThumbnail from './digital_pet_game_thumbnail.png';
 
 type Project = {
   name: string;
@@ -24,6 +26,11 @@ const projects: Project[] = [
     name: 'youtube-focus-mode',
     displayName: 'YouTube Focus Mode Chrome Extension',
     image: youtubeExtensionThumbnail,
+  },
+  {
+    name: 'digital-pet-game',
+    displayName: 'Digital Pet Game',
+    image: digitalPetGameThumbnail,
   },
   {
     name: 'simple-newtab',
@@ -76,6 +83,8 @@ export class Projects extends React.Component {
     switch (this.currentProject) {
       case 'simple-newtab':
         return <NewtabProject />;
+      case 'digital-pet-game':
+        return <DigitalPetGame />;
       case 'youtube-focus-mode':
         return <YoutubeFocusModeProject />;
       case 'personal-website':

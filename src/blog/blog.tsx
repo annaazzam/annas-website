@@ -35,10 +35,14 @@ export function getBlogs(): Promise<BlogPost[]> {
           /max\/[0-9]+\//g,
           'max/500/',
         );
+
+        const pubdateDateOnly = item.pubDate
+          ? item.pubDate?.split(' ').slice(0, 4).join(' ')
+          : undefined;
         return {
           title: item.title,
           image: reducedQualityImgSrc,
-          pubDate: item.pubDate,
+          pubDate: pubdateDateOnly,
           link: item.link,
         };
       });
@@ -91,10 +95,11 @@ export const BlogGrid = ({
           ))}
       </>
     )}
-    {blogPosts.map(({ title, image, link }: BlogPost, i: number) => (
+    {blogPosts.map(({ title, image, link, pubDate }: BlogPost, i: number) => (
       <div className={styles.blogCard} key={i}>
         <Card
           text={title}
+          subtitle={pubDate}
           image={image}
           link={link}
           overlayText="Read on medium"

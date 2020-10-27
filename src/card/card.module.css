@@ -62,6 +62,15 @@
 
 .cardText {
   height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-style: italic;
+  color: grey;
 }
 
 .cardText.small {

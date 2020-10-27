@@ -7,6 +7,7 @@ import styles from './card.module.css';
 @mobxReact.observer
 export class Card extends React.Component<{
   text?: string;
+  subtitle?: string;
   image?: string;
   // Props should either have both `overlayText` and `link`, or `onClick`.
   // overlayText is used to show what will happen when the link is clicked, e.g. "Read on Medium".
@@ -70,7 +71,14 @@ export class Card extends React.Component<{
   };
 
   render() {
-    const { text, image, overlayText, largeImage = false, ariaLabel } = this.props;
+    const {
+      text,
+      image,
+      overlayText,
+      largeImage = false,
+      ariaLabel,
+      subtitle,
+    } = this.props;
     return (
       <div className={styles.card} onBlur={this.onBlur} role="button">
         <div
@@ -83,6 +91,7 @@ export class Card extends React.Component<{
           <div className={styles.cardTitle} ref={this.titleRef}>
             {text}
           </div>
+          {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
         </div>
         <div
           style={{ backgroundImage: `url(${image})` }}

@@ -23,6 +23,7 @@ export class Card extends React.Component<{
 
   private titleRef = React.createRef<HTMLDivElement>();
   private textRef = React.createRef<HTMLDivElement>();
+  private subtitleRef = React.createRef<HTMLDivElement>();
 
   componentDidMount() {
     this.calculateFontSize();
@@ -41,11 +42,14 @@ export class Card extends React.Component<{
   private readonly calculateFontSize = () => {
     const titleElement = this.titleRef.current!;
     const textElement = this.textRef.current!;
+    const subtitleHeight = this.subtitleRef.current
+        ? parseInt(this.subtitleRef.current.style.height, 10)
+        : 0;
     titleElement.style.fontSize = '25px';
     titleElement.style.fontSize = '25px';
     const textPadding = parseInt(textElement.style.padding, 10);
     const textElementHeight =
-      textElement.getBoundingClientRect().height - textPadding * 2;
+      textElement.getBoundingClientRect().height - (textPadding * 2) - subtitleHeight;
     while (titleElement.getBoundingClientRect().height > textElementHeight) {
       const size = parseInt(titleElement.style.fontSize, 10);
       titleElement.style.fontSize = `${size - 1}px`;
@@ -91,7 +95,13 @@ export class Card extends React.Component<{
           <div className={styles.cardTitle} ref={this.titleRef}>
             {text}
           </div>
-          {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
+          {subtitle && (
+            // Style is inlined here so that it can be used for font-size calculation in
+            // this.calculateFontSize()
+            <div className={styles.subtitle} ref={this.subtitleRef} style={{ height: '17px' }}>
+              {subtitle}
+            </div>
+          )}
         </div>
         <div
           style={{ backgroundImage: `url(${image})` }}

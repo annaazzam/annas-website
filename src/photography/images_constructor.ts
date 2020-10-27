@@ -3,6 +3,7 @@ export type ImageCollection = {
   thumbnails: any[];
   displayName: string;
   folderName: string;
+  date: string;
 };
 
 const images = new Map<string, ImageCollection>();
@@ -14,23 +15,46 @@ const collections = [
     folderName: 'malabar',
     displayName: 'Malabar Headland National Park',
     numImages: 17,
+    date: 'July, 2020',
   },
-  { folderName: 'graduation', displayName: 'My Graduation', numImages: 15 },
-  { folderName: 'europe', displayName: 'Paris & Venice', numImages: 36 },
-  { folderName: 'seattle', displayName: 'Seattle', numImages: 46 },
   {
-    folderName: 'atlantachristmas',
-    displayName: 'Christmas in Atlanta',
-    numImages: 32,
+    folderName: 'graduation',
+    displayName: 'My Graduation',
+    numImages: 15,
+    date: 'March, 2019'
   },
   {
     folderName: 'weddingparty',
     displayName: "Carol and Nathan's Wedding Party",
     numImages: 56,
+    date: 'March, 2019'
+  },
+  {
+    folderName: 'europe',
+    displayName: 'Paris & Venice',
+    numImages: 36,
+    date: 'July, 2018'
+  },
+  {
+    folderName: 'seattle',
+    displayName: 'Seattle',
+    numImages: 46,
+    date: 'February, 2018'
+  },
+  {
+    folderName: 'atlantachristmas',
+    displayName: 'Christmas in Atlanta',
+    numImages: 32,
+    date: 'December, 2017'
   },
 ];
 
-collections.forEach(({ folderName, displayName, numImages }) => {
+collections.forEach(({
+  folderName,
+  displayName,
+  numImages,
+  date,
+}) => {
   images.set(folderName, {
     photos: [
       ...Array(numImages)
@@ -49,6 +73,7 @@ collections.forEach(({ folderName, displayName, numImages }) => {
     ],
     displayName,
     folderName,
+    date,
   });
 });
 

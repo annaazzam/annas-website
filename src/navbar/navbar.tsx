@@ -15,7 +15,7 @@ import mediumIcon from './social_icons/medium.svg';
 import githubIcon from './social_icons/github.svg';
 import linkedinIcon from './social_icons/linkedin.svg';
 import stackOverflowIcon from './social_icons/stackOverflow.svg';
-// import instagramIcon from './social_icons/instagram.svg';
+import instagramIcon from './social_icons/instagram.svg';
 import menuIcon from './menu-icon.svg';
 
 type NavbarItem = {
@@ -178,11 +178,11 @@ class SocialIcons extends React.Component {
       icon: linkedinIcon,
       link: 'https://www.linkedin.com/in/annaazzam/',
     },
-    // {
-    //   name: 'Instagram',
-    //   icon: instagramIcon,
-    //   link: 'https://www.instagram.com/annaazzam/',
-    // },
+    {
+      name: 'Instagram',
+      icon: instagramIcon,
+      link: 'https://www.instagram.com/annaazzam/',
+    },
     {
       name: 'Stack Overflow',
       icon: stackOverflowIcon,

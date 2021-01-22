@@ -1,5 +1,3 @@
-import * as mobx from 'mobx';
-import * as mobxReact from 'mobx-react';
 import * as React from 'react';
 import RSSParser from 'rss-parser';
 import styles from './blog.module.css';
@@ -124,7 +122,6 @@ export function getBlogsFromRss(): Promise<BlogPost[]> {
   });
 }
 
-@mobxReact.observer
 export class Blog extends React.Component {
   render() {
     return (

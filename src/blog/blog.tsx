@@ -13,6 +13,12 @@ type BlogPost = {
 
 export const hardcodedBlogsPosts: BlogPost[] = [
   {
+    title: "3 Ways to Remove Duplicates in JavaScript Arrays",
+    image: "https://miro.medium.com/max/4800/1*lDOC1idA-kOEXWELjOMlwQ.png",
+    pubDate: "Fri, 22 Jan 2021",
+    link: "https://annaazzam.medium.com/3-ways-to-remove-duplicates-in-javascript-arrays-41775c7caf91",
+  },
+  {
     title: "React Functional vs. Class Components",
     image: "https://cdn-images-1.medium.com/max/500/1*AByIfmKBF6hFjLuA0hpSxg.jpeg",
     pubDate: "Thu, 21 Jan 2021",

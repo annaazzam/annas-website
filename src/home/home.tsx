@@ -1,7 +1,7 @@
 import * as mobx from 'mobx';
 import * as mobxReact from 'mobx-react';
 import * as React from 'react';
-import { BlogGrid, BlogPost, getBlogs } from '../blog/blog';
+import { BlogGrid, hardcodedBlogsPosts } from '../blog/blog';
 import styles from './home.module.css';
 import background from './skybg.jpg';
 import { CollectionGrid } from '../photography/photography';
@@ -10,16 +10,12 @@ import { Button } from '../ui/button';
 
 @mobxReact.observer
 export class Home extends React.Component {
-  @mobx.observable.ref
-  private allBlogs: BlogPost[] = [];
 
   @mobx.observable.ref
   private numColumns: number = 0;
 
-  @mobx.action
-  async componentDidMount() {
+  componentDidMount() {
     this.calculateNumColumns();
-    this.allBlogs = await getBlogs();
     window.addEventListener('resize', this.calculateNumColumns);
   }
 
@@ -64,7 +60,7 @@ export class Home extends React.Component {
         </div>
         <div className={styles.blogIntro}>
           <BlogGrid
-            blogPosts={this.allBlogs.slice(0, this.numColumns)}
+            blogPosts={hardcodedBlogsPosts.slice(0, this.numColumns)}
             numPlaceholders={this.numColumns}
           />
           <div className={styles.seeMoreContainer}>

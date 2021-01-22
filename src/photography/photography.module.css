@@ -6,7 +6,10 @@
 
 .photographyCard {
   flex: 1 1 300px;
-  margin: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .collectionTitle {

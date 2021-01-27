@@ -13,6 +13,18 @@ type BlogPost = {
 
 export const hardcodedBlogsPosts: BlogPost[] = [
   {
+    title: "Pros and Con of Cyclomatic Complexity as a Metric",
+    image: "https://miro.medium.com/max/4800/1*X3gRveo3bxvWnbKQlvo78Q.jpeg",
+    pubDate: "Wed, 27 Jan 2021",
+    link: "https://annaazzam.medium.com/pros-and-cons-of-cyclomatic-complexity-as-a-metric-b25000dcda9c",
+  },
+  {
+    title: "Avoid Prop Drilling with React Context",
+    image: "https://miro.medium.com/max/4800/1*SIAeoXVrXuTPZWmos092ww.jpeg",
+    pubDate: "Sat, 23 Jan 2021",
+    link: "https://annaazzam.medium.com/avoid-prop-drilling-with-react-context-a00392ee3d8",
+  },
+  {
     title: "3 Ways to Remove Duplicates in JavaScript Arrays",
     image: "https://miro.medium.com/max/4800/1*lDOC1idA-kOEXWELjOMlwQ.png",
     pubDate: "Fri, 22 Jan 2021",
